@@ -1,6 +1,6 @@
 <?php
 
-include 'dbconn.php';
+include 'database.php';
 
 ?>
 
@@ -23,7 +23,7 @@ if(isset($_POST['submit-search'])) {
 	$queryResult = mysqli_num_rows($result);
 
 	echo "<h4><font>".$queryResult." Results found for <mark>".$search."</mark></font></h4>";
-    
+
     if($queryResult > 0) {
     	while ($row = mysqli_fetch_assoc($result)) {
     		echo "<div style='background-color: skyblue; padding: 8px; margin-bottom: 5px;'><a class='items-link' href='single-movie.php?name={$row['m_name']}' target='_blank'>
@@ -38,7 +38,7 @@ if(isset($_POST['submit-search'])) {
 
 }
 
-?>	
+?>
 
 </div>
 </body>

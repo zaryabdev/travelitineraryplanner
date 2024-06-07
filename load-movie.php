@@ -1,6 +1,6 @@
 <?php
 
-include 'dbconn.php';
+include 'database.php';
 
 $search_term = $_POST['movie'];
 

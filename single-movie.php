@@ -1,6 +1,6 @@
 <?php
 
-include 'dbconn.php';
+include 'database.php';
 
 ?>
 
@@ -28,7 +28,7 @@ if ($queryResult > 0) {
 	}
 }
 ?>
-	
+
 </div>
 </body>
 </html>
