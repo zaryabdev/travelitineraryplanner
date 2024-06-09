@@ -35,7 +35,6 @@ if(isset($_POST['submit-search'])) {
     } else {
     	echo "<div style='padding-top: 10px;'><font style='font-weight: bold; color: #FF0033;'>Sorry there are no results matching your search!</font></div>";
     }
-
 }
 
 ?>
