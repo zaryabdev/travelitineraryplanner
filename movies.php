@@ -83,7 +83,7 @@ if (!isset($_SESSION["user"])) {
         arr.push(text)
 
         localStorage.setItem("shared-data", JSON.stringify(arr));
-        alert("Stored Succesfully");
+
         } catch (error) {
             console.log(error);
 
