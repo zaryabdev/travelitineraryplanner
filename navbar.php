@@ -2,7 +2,7 @@
     <div class="container-xl max-w-screen-xl">
       <!-- Logo -->
       <a class="navbar-brand" href="#">
-        <img src="https://preview.webpixels.io/web/img/logos/clever-light.svg" class="h-10" alt="...">
+        <h5 class="text-light">Travel Itinerary Planner</h5>
       </a>
       <!-- Navbar toggle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,17 +16,19 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Stays</a>
+            <a class="nav-link" href="hotels.php">Hotels</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Flights</a>
+            <a class="nav-link" href="flights.php">Flights</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Attractions</a>
+            <a class="nav-link" href="attractions.php">Attractions</a>
           </li>
-		  <li class="nav-item">
-            <a class="nav-link" href="movies.php">Movies</a>
-          </li>
+		      <!--
+            <li class="nav-item">
+              <a class="nav-link" href="movies.php">Movies</a>
+            </li>
+          -->
 		  <li class="nav-item">
             <a class="nav-link" href="tracker.php">Tracker</a>
           </li>

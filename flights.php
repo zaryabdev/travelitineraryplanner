@@ -13,11 +13,11 @@ if (!isset($_SESSION["user"])) {
     <link rel="stylesheet" href="style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link href="https://unpkg.com/@webpixels/css@1.2.6/dist/index.css" rel="stylesheet">
-    <title>Movies</title>
+    <title>Hotals</title>
 </head>
 <body>
     <?php include 'navbar.php' ?>
-    <section class="position-relative pt-48 pb-40 bg-dark bg-cover bg-size--cover" style="background-image:url(https://images.unsplash.com/photo-1549082984-1323b94df9a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
+    <section class="position-relative pt-48 pb-40 bg-dark bg-cover bg-size--cover" style="background-image:url(https://images.unsplash.com/photo-1503365113766-4a362681eac5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80)">
     <!-- Overlay -->
     <span class="position-absolute top-0 start-0 w-full h-full bg-dark opacity-80"></span>
     <!-- Content -->
@@ -27,11 +27,11 @@ if (!isset($_SESSION["user"])) {
         <h1 class="ls-tight font-bolder display-5 text-white mb-5">
         Stay somewhere great
         </h1>
-        <form action="movie-search.php" method="POST">
+        <form action="" method="POST">
             <div class="row">
                 <div class="col">
                     <div class="autocomplete">
-                        <input type="text" id="search-bar" class="form-control" name="search" autocomplete="off" placeholder="Movie search..." minlength="2">
+                        <input type="text" id="search-bar" class="form-control" name="search" autocomplete="off" placeholder="Flight search..." minlength="2">
                     </div>
 
                 </div>
@@ -52,13 +52,13 @@ if (!isset($_SESSION["user"])) {
 	$(document).ready(function(){
 
 		$("#search-bar").keyup(function(){
-		var movie = $(this).val();
+		var loadData = $(this).val();
 
-		if(movie != ''){
+		if(loadData != ''){
 			$.ajax({
-				url: "load-movie.php",
+				url: "load-flight.php",
 				method: "POST",
-				data: {movie: movie},
+				data: {loadData: loadData},
 				success: function(data){
 					// console.log(data);
 					$("#listing").fadeIn("fast").html(data);
@@ -72,15 +72,17 @@ if (!isset($_SESSION["user"])) {
 	$(document).on('click','#listing #add-to-cart',function(){
 
         if(window.localStorage!==undefined) {
-        let text = $(this).text().trim();
-        console.log(text);
+        let text = $(this).text()
+        let result = text.replace("Book", "").trim();;
+
+        console.log(result);
         try {
-        let moviesStr = localStorage.getItem("shared-data");
+        let str = localStorage.getItem("shared-data");
         let arr = [];
-        if(moviesStr){
-            arr = JSON.parse(moviesStr)
+        if(str){
+            arr = JSON.parse(str)
         }
-        arr.push(text)
+        arr.push(result)
 
         localStorage.setItem("shared-data", JSON.stringify(arr));
 

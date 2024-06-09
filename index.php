@@ -17,7 +17,7 @@ if (!isset($_SESSION["user"])) {
 <body>
 <div>
 <?php include 'navbar.php' ?>
-  <section class="position-relative pt-48 pb-40 bg-dark bg-cover bg-size--cover" style="background-image:url(https://images.unsplash.com/photo-1549082984-1323b94df9a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
+  <section class="position-relative pt-48 pb-40 bg-dark bg-cover bg-size--cover" style="background-image:url(https://images.unsplash.com/photo-1573126617899-41f1dffb196c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80)">
     <!-- Overlay -->
     <span class="position-absolute top-0 start-0 w-full h-full bg-dark opacity-80"></span>
     <!-- Content -->
@@ -26,16 +26,16 @@ if (!isset($_SESSION["user"])) {
         <div class="col-lg-8 text-center text-lg-start">
           <!-- Title -->
           <h1 class="ls-tight font-bolder display-5 text-white mb-5">
-            We built incredible web products for designers & developers
+          Your Guide to an Action-Packed time in Australia
           </h1>
           <!-- Text -->
           <p class="lead text-white text-opacity-75 mb-10 w-lg-2/3">
-            For over 5 years, we pride ourselves on our commitment to excellence, as well as our ability to deliver for our customers.
+          If you’re looking for thrills for the whole family, look no further than Australia. From exciting theme parks to desert adventures, you’re sure to find fun times all season long.
           </p>
           <!-- Buttons -->
           <div class="mt-10 mx-n2">
-            <a href="#" class="btn btn-lg btn-primary shadow-sm mx-2 px-lg-8">
-              Get started
+            <a href="attractions.php" class="btn btn-lg btn-primary shadow-sm mx-2 px-lg-8">
+             Take me to  Attractions
             </a>
             <a href="#" class="btn btn-lg btn-neutral mx-2 px-lg-8">
               Learn more
